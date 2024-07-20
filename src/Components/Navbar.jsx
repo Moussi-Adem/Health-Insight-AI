@@ -20,10 +20,10 @@ const Navbar = () => {
 
 
     const navigation = [
-        { name: 'Home', href: '#', current: true },
+        { name: 'Home', href: '/Home', current: true },
         { name: 'Servives', href: '/Services', current: false },
-        { name: 'About Us', href: '/AboutUs', current: false },
-        { name: 'Contact Us', href: 'ContactUs', current: false },
+        { name: 'AboutUs', href: '/AboutUs', current: false },
+        { name: 'ContactUs', href: 'ContactUs', current: false },
     ]
     
     function classNames(...classes) {

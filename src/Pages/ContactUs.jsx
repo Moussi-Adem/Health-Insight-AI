@@ -19,8 +19,8 @@ import { IoClose } from "react-icons/io5";
 const navigation = [
     { name: 'Home', href: '/Home', current: false },
     { name: 'Servives', href: '/Services', current: false },
-    { name: 'About Us', href: '/AboutUs', current: false },
-    { name: 'Contact Us', href: '#', current: true },
+    { name: 'AboutUs', href: '/AboutUs', current: false },
+    { name: 'ContactUs', href: '/ContactUs', current: true },
 ]
 
 function classNames(...classes) {
