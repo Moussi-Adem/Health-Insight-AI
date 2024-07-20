@@ -1,0 +1,27 @@
+[
+    {
+        "quet" : "What is this application and how does it work ?",
+        "content": "This application uses artificial intelligence algorithms to analyze the symptoms you enter and provide a preliminary diagnosis. It also offers advice and recommendations for further actions."
+    },
+
+    {
+        "quet" : "Is the diagnosis provided by the application accurate ?",
+        "content": "The diagnosis provided by the application is based on AI algorithms and is intended to offer preliminary insights. It should not replace professional medical advice. Always consult a healthcare provider for an accurate diagnosis and treatment plan."
+    },
+
+    {
+        "quet" : "How do I enter my symptoms and get a diagnosis ?",
+        "content": "You can enter your symptoms by filling out a form with your personal details and a description of your symptoms. You also have the option to upload images if relevant. Once submitted, the AI algorithms will analyze the data and provide a preliminary diagnosis and recommendations."
+    },
+
+    {
+        "quet" : "Is my personal information safe and secure ?",
+        "content": "Yes, we prioritize the security and privacy of your personal information. All data is encrypted and stored securely. We comply with relevant data protection regulations to ensure your information is safe."
+    },
+
+    {
+        "quet" : "Can I use this application for any kind of symptoms ?",
+        "content": "The application is designed to handle a wide range of common symptoms. However, it may not cover all possible medical conditions. If you have severe or unusual symptoms, it is important to seek immediate medical attention from a healthcare professional."
+    }
+
+]
