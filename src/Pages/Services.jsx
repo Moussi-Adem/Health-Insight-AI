@@ -207,7 +207,7 @@ const Service = () => {
 
 
             {/* Services Section */}
-            <section className="w-11/12 m-auto my-8 py-10">
+            <section className="w-11/12 max-sm:mt-0 m-auto my-8 py-10">
                 <div className="  mx-auto px-4 ">
                     <div className="text-center">
                         <h2 className="text-3xl font-bold max-sm:text-2xl text-purple-700 mb-4">Our Services</h2>

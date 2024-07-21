@@ -9,12 +9,14 @@ import Footer from '../Components/Footer'
 
 
 const Presentation = () => {
+
+
     return (
         <div>
             <Header />
-            <BtnScrol/> 
+            <BtnScrol />
             <PreSection />
-            <Questions/>
+            <Questions />
             <Testimonies />
             <Newsletter />
             <Footer />

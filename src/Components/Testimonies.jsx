@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import tData from '../Components/testimoniesData.json'
 import { useState } from 'react';
 import img1 from "../assets/SW.png"
 import img2 from "../assets/img2.jpg"
@@ -59,7 +58,7 @@ const Testimonies = () => {
 
 
     return (
-        <section className='flex  m-auto w-5/6 rounded-3xl shadow-xl  bg-slate-300 dark:bg-slate-800 px-6 py-10 justify-center items-center'>
+        <section className='flex max-sm:w-full m-auto w-5/6 rounded-3xl shadow-xl  bg-slate-300 dark:bg-slate-800 px-6 py-10 justify-center items-center'>
             <div>
                 {
                     Tdata.map((item, index) => index === current &&

@@ -204,7 +204,7 @@ const ContactUs = () => {
 
 
             {/* Contact Form Section */}
-            <section className="w-4/6 m-auto my-10 p-4 shadow-lg  bg-slate-200 dark:bg-slate-800 rounded-xl">
+            <section className="w-4/6 max-sm:w-full max-sm:p-8 max-sm:my-0 m-auto my-10 p-4 shadow-lg  bg-slate-200 dark:bg-slate-800 rounded-xl">
                 <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                     <h2 className="mb-4 text-4xl tracking-tight font-bold text-center text-purple-500 ">Contact Us</h2>
                     <p className="mb-8 lg:mb-16 font-light text-center text-slate-500 dark:text-slate-400 sm:text-xl">

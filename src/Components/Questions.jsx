@@ -30,11 +30,11 @@ const Questions = () => {
                     </button>
 
                     {isOpen &&
-                        <p className=' w-4/6 border-2 m-auto p-6 border-purple-300 rounded-2xl'>
+                        <p className=' w-4/6 max-sm:w-11/12 border-2 m-auto p-6 max-sm:p-0 border-purple-300 rounded-2xl'>
                             {Quest.map((item, index) => (
                                 <div key={index} className=' grid m-auto w-full   duration-300 '>
                                     <h1 className='text-lg text-center mt-10 font-bold mb-4 text-white max-sm:text-xs'>{item.quet}</h1>
-                                    <div className=' w-4/5  m-auto  my-0 bg-purple-400 shadow-2xl rounded-xl hover:scale-110 cursor-pointer p-6 text-xl duration-200  text-slate-700  max-sm:text-sm'>
+                                    <div className=' w-5/6  m-auto  my-0 bg-purple-400 shadow-2xl rounded-xl hover:scale-110 cursor-pointer p-6 text-xl duration-200  text-slate-700  max-sm:text-sm'>
                                         {item.content}
                                     </div>
                                 </div>))

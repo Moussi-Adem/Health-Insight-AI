@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const PreSection = () => {
     return (
 
-        <section className='flex max-md:flex-col min-w-96 w-11/12  m-auto my-20 bg-slate-100 dark:bg-slate-300 rounded-2xl shadow-lg '>
+        <section className='flex max-sm:mt-0 max-md:flex-col min-w-96 w-11/12  m-auto my-20 bg-slate-100 dark:bg-slate-300 rounded-2xl shadow-lg '>
             <article className='w-1/2 p-8 max-md:w-full max-md:h-1/2 '>
                 <h1 className='text-3xl font-bold m-4 w-11/12'>Get Yourself An <span className='text-purple-700'>Easy Diagnostic</span> For <span className='text-purple-700'>Free</span> Right Now!</h1>
                 <div className='text-xl p-8 my-5 w-11/12'>

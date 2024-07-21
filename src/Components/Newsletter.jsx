@@ -4,7 +4,7 @@ import { IoMail } from "react-icons/io5";
 const Newsletter = () => {
     return (
         <>
-            <div className=' grid grid-cols-1 gap-2 max-sm:text-sm w-2/3 m-auto my-32  rounded-3xl  bg-purple-950  shadow-xl  dark:bg-gray-900 p-6'>
+            <div className=' grid grid-cols-1 gap-2 max-sm:w-full max-sm:rounded-none max-md:w-5/6 max-sm:text-sm w-2/3 m-auto my-32  rounded-3xl  bg-purple-950  shadow-xl  dark:bg-gray-900 p-6'>
                 <h1 className='text-center max-sm:text-2xl text-3xl text-white font-semibold'>Join <span className=' font-bold text-purple-500'>HealthInsight AI</span> newsletter !</h1>
                 <p className='text-center text-gray-400 mt-5 pb-6'>Be among the first ones to receive our latest news and offers.</p>
                 <form className='flex flex-wrap justify-center items-center  gap-5'>
