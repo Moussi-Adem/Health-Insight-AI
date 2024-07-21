@@ -1,28 +1,8 @@
 {
-    "routes": [
+    "rewrites": [
         {
-            "src":"/", "dest": "/"
-        },
-        {
-            "src":"/Presentation", "dest": "/"
-        },
-        {
-            "src":"/SignUp", "dest": "/"
-        },
-        {
-            "src":"/LogIn", "dest": "/"
-        },
-        {
-            "src":"/Home", "dest": "/"
-        },
-        {
-            "src":"/Services", "dest": "/" 
-        },
-        {
-            "src":"/AboutUs", "dest": "/" 
-        },
-        {
-            "src":"/ContactUs", "dest": "/"
+            "source":"/(.*)",
+            "dest": "/"
         }
     ]
 }
