@@ -4,25 +4,25 @@
             "src":"/", "dest": "/"
         },
         {
-            "src":"/Presentation", "dest": "/Presentation"
+            "src":"/Presentation", "dest": "/"
         },
         {
-            "src":"/SignUp", "dest": "/SignUp"
+            "src":"/SignUp", "dest": "/"
         },
         {
-            "src":"/LogIn", "dest": "/Login"
+            "src":"/LogIn", "dest": "/"
         },
         {
-            "src":"/Home", "dest": "/Home"
+            "src":"/Home", "dest": "/"
         },
         {
-            "src":"/Services", "dest": "/Services" 
+            "src":"/Services", "dest": "/" 
         },
         {
-            "src":"/AboutUs", "dest": "/AboutUs" 
+            "src":"/AboutUs", "dest": "/" 
         },
         {
-            "src":"/ContactUs", "dest": "/ContactUs"
+            "src":"/ContactUs", "dest": "/"
         }
     ]
 }
