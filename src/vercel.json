@@ -1,0 +1,28 @@
+{
+    "routes": [
+        {
+            "src":"/", "dest": "/"
+        },
+        {
+            "src":"/Presentation", "dest": "/Presentation"
+        },
+        {
+            "src":"/SignUp", "dest": "/SignUp"
+        },
+        {
+            "src":"/LogIn", "dest": "/Login"
+        },
+        {
+            "src":"/Home", "dest": "/Home"
+        },
+        {
+            "src":"/Services", "dest": "/Services" 
+        },
+        {
+            "src":"/AboutUs", "dest": "/AboutUs" 
+        },
+        {
+            "src":"/ContactUs", "dest": "/ContactUs"
+        }
+    ]
+}

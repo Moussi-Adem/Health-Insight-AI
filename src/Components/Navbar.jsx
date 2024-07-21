@@ -4,7 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import profileImg from "../assets/user.png"
 import Logo from "../assets/healthinsightai.png"
 import { FaArrowRightFromBracket } from "react-icons/fa6";
-// import { MdAccountBox } from "react-icons/md";
+
 import { IoSettingsSharp } from "react-icons/io5";
 import ThemeToggle from './ThemeToggle'
 import { useNavigate, Link } from 'react-router-dom'
@@ -23,7 +23,7 @@ const Navbar = () => {
         { name: 'Home', href: '/Home', current: true },
         { name: 'Servives', href: '/Services', current: false },
         { name: 'AboutUs', href: '/AboutUs', current: false },
-        { name: 'ContactUs', href: 'ContactUs', current: false },
+        { name: 'ContactUs', href: '/ContactUs', current: false },
     ]
     
     function classNames(...classes) {

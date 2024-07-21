@@ -3,8 +3,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import profileImg from "../assets/user.png"
 import Logo from "../assets/healthinsightai.png"
-import { FaArrowRightFromBracket } from "react-icons/fa6";
-// import { MdAccountBox } from "react-icons/md";
+import { FaArrowRightFromBracket } from "react-icons/fa6";;
 import { IoSettingsSharp } from "react-icons/io5";
 import ThemeToggle from '../Components/ThemeToggle'
 import { useNavigate, Link } from 'react-router-dom'
