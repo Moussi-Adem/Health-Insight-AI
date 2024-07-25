@@ -44,6 +44,7 @@ const Navbar = () => {
         try {
             await signOut(auth);
             navigate('/Presentation');
+            location.reload();
         }
         catch (error) {
             console.error(error);
@@ -65,7 +66,6 @@ const Navbar = () => {
                     </div>
 
                     {/* Logo and Nav elements*/}
-
                     <div className="flex  flex-1 items-center  justify-center sm:items-stretch sm:justify-start">
                         <Link to="/Home" className='-ml-4'><div className="flex  flex-shrink-0 items-center">
                             <img
@@ -95,7 +95,6 @@ const Navbar = () => {
                     </div>
 
                     {/* Light and Dark buttons Mode switcher */}
-
                     <div className=' flex max-sm:hidden mr-5 space-x-0 dark:text-white shadow-xl rounded-md py-1 px-1 border-gray-400'>
                         <ThemeToggle className=" py-3 dark:bg-dark   " />
                     </div>
@@ -108,7 +107,6 @@ const Navbar = () => {
                             <span className="sr-only">View notifications</span>
                             <BellIcon aria-hidden="true" className="h-6 w-6" />
                         </button>
-
 
                         {/* Profile dropdown */}
                         <Menu as="div" className="relative ml-3 ">
@@ -172,7 +170,6 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Responsive Navbar */}
-
             <DisclosurePanel className="sm:hidden">
                 <div className=" relative space-y-1 px-2 pb-3 pt-2">
                     {navigation.map((item) => (
@@ -187,9 +184,7 @@ const Navbar = () => {
                             )}
                         >
                             {item.name}
-
                         </DisclosureButton>
-
                     ))}
                     <hr className='w-full m-auto h-1' />
                     <div className=' p-3 flex  justify-start gap-4'>

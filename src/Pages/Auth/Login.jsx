@@ -5,6 +5,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { googleProvider } from '../../Config/firebase';
 import Logo from "../../assets/healthinsightai.png"
 import { getAuth, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
@@ -21,25 +23,27 @@ const Login = () => {
             navigate('/Home');
         }
         catch (error) {
-            console.error(error);
-            alert(error.message);
+            toast.error( error.message);
         }
     }
+
 
     const SignInWithGoogle = async () => {
         try {
             await signInWithPopup(auth, googleProvider);
             navigate('/Home');
+
         }
         catch (error) {
-            console.error(error);
+            toast.error( error.message);
         }
     }
 
 
+
     return (
         <>
-            <div className='flex justify-center max-sm:w-full w-1/3 m-auto mt-8'>
+            <div className='flex justify-center max-sm:w-full w-1/3 m-auto my-8'>
                 <Link to="/Presentation" ><div className='flex '>
                     <img
                         alt="HealthInsightAI"
@@ -64,6 +68,18 @@ const Login = () => {
 
                         <input className='p-2 rounded-xl border border-gray-400 outline-none focus:border-purple-600 ' type="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
                         <button className='bg-purple-600  hover:bg-purple-500  rounded-xl text-white  text-xl py-1 ' onClick={(e) => { LogIn(e) }} >Log in</button>
+                        <ToastContainer
+                            position="top-center"
+                            autoClose={5000}
+                            hideProgressBar={false}
+                            newestOnTop={false}
+                            closeOnClick
+                            rtl={false}
+                            pauseOnFocusLoss={false}
+                            draggable
+                            pauseOnHover
+                            theme="light"
+                            transition:Bounce />
                     </form>
 
                     <div className='mt-10 grid grid-cols-3 items-center text-gray-500 '>

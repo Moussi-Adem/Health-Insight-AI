@@ -3,19 +3,17 @@ import { IoMail } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 import { useState } from 'react';
 import { googleProvider } from '../../Config/firebase';
-import { getAuth, createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithPopup, sendEmailVerification } from 'firebase/auth';
 import { useNavigate, Link } from 'react-router-dom';
 import Logo from "../../assets/healthinsightai.png"
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignUp = () => {
     const [userN, setUserN] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-    // console.log(auth?.currentUser?.email);
-    // console.log(auth?.currentUser?.name);
     const auth = getAuth();
     const navigate = useNavigate();
 
@@ -23,14 +21,11 @@ const SignUp = () => {
     const SignUP = async (e) => {
         e.preventDefault();
         await createUserWithEmailAndPassword(auth, email, password).then((user) => {
-            navigate('/LogIn');
+            navigate("/login");
         })
             .catch((error) => {
-                aler(error.message);
+                toast.error( error.message);
             });
-
-
-
     };
 
     const SignInWithGoogle = async () => {
@@ -39,7 +34,7 @@ const SignUp = () => {
             navigate('/Home');
         }
         catch (error) {
-            console.error(error);
+            toast.error( error.message);
         }
     }
 
@@ -70,7 +65,18 @@ const SignUp = () => {
                         <input className='p-2 rounded-xl border border-gray-400 outline-none focus:border-purple-600 ' type="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
                         {/* <input className='p-2 rounded-xl border ' type="password"  placeholder='Rewrite your Password' /> */}
                         <button className='bg-purple-600  hover:bg-purple-500 rounded-xl text-white text-xl py-1  ' onClick={(e) => { SignUP(e) }} >Sign Up</button>
-
+                        <ToastContainer
+                            position="top-center"
+                            autoClose={5000}
+                            hideProgressBar={false}
+                            newestOnTop={false}
+                            closeOnClick
+                            rtl={false}
+                            pauseOnFocusLoss={false}
+                            draggable
+                            pauseOnHover
+                            theme="light"
+                            transition:Bounce />
                     </form>
 
                     <div className='mt-10 grid grid-cols-3 items-center text-gray-500 '>

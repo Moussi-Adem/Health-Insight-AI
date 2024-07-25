@@ -8,6 +8,7 @@ import AboutUs from "./Pages/AboutUs.jsx";
 import ContactUs from "./Pages/ContactUs.jsx";
 import AuthContext from "./Pages/Auth/AuthContext.jsx"
 import Protected from "./Pages/Auth/Protected.jsx";
+import ChatBot from "./Components/ChatBot.jsx";
 
 
 
@@ -32,6 +33,9 @@ function App() {
     },
     {
       path:'/Home', element: <Protected><Home /></Protected> ,
+    },
+    {
+      path:'/Home', element: <Protected><ChatBot /></Protected> ,
     },
     {
       path:'/Services', element: <Protected><Services /></Protected> ,

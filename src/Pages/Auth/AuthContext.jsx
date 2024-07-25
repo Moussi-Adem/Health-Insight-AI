@@ -11,6 +11,7 @@ const AuthContext = ({children}) => {
     const auth = getAuth();
     const [user, setUser] = useState();
     const [loading, setLoading] = useState(true);
+
     // Traking user when loading
     useEffect(() => {
         let unsubscribe = onAuthStateChanged(auth, (currentUser) =>{
@@ -21,6 +22,7 @@ const AuthContext = ({children}) => {
                 setUser(null)
             }
         });
+        
         // Unsubscribe when component unmounts
         return () => {
         if(unsubscribe) unsubscribe();
