@@ -21,7 +21,8 @@ const SignUp = () => {
     const SignUP = async (e) => {
         e.preventDefault();
         await createUserWithEmailAndPassword(auth, email, password).then((user) => {
-            navigate("/login");
+            sendEmailVerification(auth.currentUser);
+            toast.success("Account Created Successfully! Email verification will be sent.");
         })
             .catch((error) => {
                 toast.error( error.message);
