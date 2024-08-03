@@ -19,9 +19,6 @@ export default {
       screens: {
         'xs': '550px',
       },
-      fontFamily:{
-        body : ["Roboto"]
-      }
     },
   },
   plugins: [],

@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { IoMail } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate, Link } from 'react-router-dom';
 import { googleProvider } from '../../Config/firebase';
 import Logo from "../../assets/healthinsightai.png"
-import { getAuth, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, signInWithPopup , ProviderId ,} from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { getDocs, collection } from 'firebase/firestore';
+import { db } from '../../Config/firebase'
+
 
 const Login = () => {
 
@@ -16,29 +19,53 @@ const Login = () => {
     const auth = getAuth();
     const navigate = useNavigate();
 
+    // Set The Patient Collection
+    const [patient, setPatient] = useState([]);
+    const patientCollectionRef = collection(db, "patient");
+
+    // Get Patient Data From Firebase
+    useEffect(() => {
+        const getPatient = async () => {
+            try {
+                const data = await getDocs(patientCollectionRef);
+                const filteredData = data.docs.map((profile) => ({ ...profile.data(), id: profile.id }))
+                setPatient(filteredData);
+            }
+            catch (error) {
+                toast.error(error.message)
+            }
+        }
+
+        getPatient();
+    }, []);
+
     const LogIn = async (e) => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            navigate('/Home');
+            if (auth.currentUser.emailVerified) {
+                navigate('/Home');
+            }
+            else {
+                toast.info("Please verify your email address to proceed.");
+            }
         }
         catch (error) {
-            toast.error( error.message);
+            toast.error(error.message);
         }
     }
 
 
     const SignInWithGoogle = async () => {
         try {
-            await signInWithPopup(auth, googleProvider);
-            navigate('/Home');
 
+            await signInWithPopup(auth, googleProvider); 
+            navigate('/Home');
         }
         catch (error) {
-            toast.error( error.message);
+            toast.error("You are not authorized to access this account.");
         }
     }
-
 
 
     return (
@@ -88,9 +115,9 @@ const Login = () => {
                         <hr className='border-gray-500' />
                     </div>
 
-                    <button onClick={SignInWithGoogle} className='flex m-auto  justify-center my-4 items-center gap-2 w-fit border-2 rounded-lg shadow-xl bg-slate-100 p-2 '>
+                    {/* <button onClick={SignInWithGoogle} className='flex m-auto  justify-center my-4 items-center gap-2 w-fit border-2 rounded-lg shadow-xl bg-slate-100 p-2 '>
                         <FcGoogle className='text-2xl' /> Log In with Google
-                    </button>
+                    </button> */}
                     <Link to='#' className=' text-xs border-b  text-blue-600 underline'>Forget Your Password?</Link>
 
                     <hr className='border-gray-500' />
@@ -99,8 +126,6 @@ const Login = () => {
                         <Link to="/SignUp" className='flex m-auto my-4 justify-center items-center w-fit border-2 rounded-lg shadow-xl font-semibold    bg-slate-100 p-3 hover:bg-slate-200'>Register</Link>
                     </div>
                 </div>
-
-
             </div>
         </>
     )

@@ -32,6 +32,7 @@ const Navbar = () => {
     const auth = getAuth();
     const navigate = useNavigate();
 
+    // State for The Sign Out popup
     const [isOpen, setIsOpen] = useState(false);
 
     if (auth?.currentUser?.photoURL == null) {
@@ -137,10 +138,10 @@ const Navbar = () => {
                                 </MenuItem>
 
                                 <MenuItem>
-                                    <a href="#" className="flex justify-start items-center px-4 py-3   text-sm text-gray-700 dark:text-white data-[focus]:bg-gray-300 dark:data-[focus]:bg-gray-700">
+                                    <Link to='/Profile' className="flex justify-start items-center px-4 py-3   text-sm text-gray-700 dark:text-white data-[focus]:bg-gray-300 dark:data-[focus]:bg-gray-700">
                                         <IoSettingsSharp className="mr-2 text-lg  dark:text-white " /> Settings
 
-                                    </a>
+                                    </Link>
                                 </MenuItem>
                                 <hr className='w-5/6 m-auto h-1' />
                                 <MenuItem onClick={() => setIsOpen((prev) => !prev)} >
@@ -162,7 +163,6 @@ const Navbar = () => {
                                             <button className='bg-purple-100 text-black px-4 py-2 rounded-xl border-2 border-purple-700' onClick={() => setIsOpen((prev) => !prev)}>Cancel</button>
                                         </div>
                                     </div>
-                                    
                                 </div>
                                     }
                     </div>

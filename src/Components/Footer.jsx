@@ -56,7 +56,7 @@ const Footer = () => {
                                 <select name="" id="" className='bg-transparent isal border-2 p-1 px-4 rounded-md'>
                                     <option value="En" defaultValue={"English"} className="bg-slate-950" >English</option>
                                     <option value="Ar" className="bg-slate-800">Arabic</option>
-                                    <option value="Fr"className="bg-slate-800">Franch</option>
+                                    <option value="Fr"className="bg-slate-800">French</option>
                                     <option value="Sp"className="bg-slate-800">Spanish</option>
                                     <option value="Rs"className="bg-slate-800">Russia</option>
                                 </select>

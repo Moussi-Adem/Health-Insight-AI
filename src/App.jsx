@@ -6,12 +6,10 @@ import Home from "./Pages/Home.jsx";
 import Services from "./Pages/Services.jsx";
 import AboutUs from "./Pages/AboutUs.jsx";
 import ContactUs from "./Pages/ContactUs.jsx";
+import Profile from "./Pages/Profile.jsx";
 import AuthContext from "./Pages/Auth/AuthContext.jsx"
 import Protected from "./Pages/Auth/Protected.jsx";
 import ChatBot from "./Components/ChatBot.jsx";
-
-
-
 import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
@@ -45,6 +43,9 @@ function App() {
     },
     {
       path:'/ContactUs', element: <Protected><ContactUs /></Protected> ,
+    },
+    {
+      path:'/Profile', element: <Protected><Profile /></Protected> ,
     },
   ])
 
